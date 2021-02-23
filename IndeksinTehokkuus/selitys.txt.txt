@@ -1,0 +1,7 @@
+Aivan kuten kurssin osassa seitsemän kerrottiin, indeksin lisääminen tauluun tehostaa tauluun liittyvien kyselyiden suorittamista. Tämä johtuu siitä ettei haku enää käy kaikkia taulun rivejä läpi, vaan etsii tavallaan käyttäen indeksiä 'hakemistona' vain tietokannan relevanteista osioista.
+
+Huomaamme myös että indeksin lisääminen melkein tuplaa käytetyn tilan. Oletettavasti koska alkuperäisessäkin tietokannassa on vain 2 taulua. Indeksin hakemistorakenne vie siis tilaa. 
+
+Indeksin käyttö ennen rivien lisäämistä myös hidastaa tiedon lisäämistä kuten testeistä näemme. Toisessa testissä rivien lisäykseen kuluu kolminkertainen aika muihin testeihin verrattuna. Tällaisessa tietokannassa pitäisin hyvänä ideana luoda ensin pohja tietokanta, johon myöhemmin lisätään pienempiä määriä tietoja. Aivan kuten kolmannessa testissä, jossa indeksi luotiin vasta rivien lisäämisen jälkeen.
+
+Testasin myös indeksin luontiin kuluvaa aikaa, siltä varalta jos sillä olisi tuloksen kannalta mitään merkitystä. Sillä ei juurikaan ollut. Kumminkin toisessa testissä, eli siis ennen kuin tietokantaan on lisätty dataa indeksin luontiin kului 0,007 sekunttia. Siinä missä kolmannessa testissä, eli kun luodaan indeksi tietojen lisäämisen jälkeen, kului indeksin luontiin noin 0,95 sekunttia. Vaikka laskisimme nämä mukaan ylläoleviin relevantteihin aikoihin mukaan, kolmas testi on selvästi muita nopeampi tapa.

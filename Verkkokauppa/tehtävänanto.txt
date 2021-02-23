@@ -1,0 +1,13 @@
+Tehtävä 2: Verkkokauppa
+Tehtäväsi on suunnitella tietokanta, jota voitaisiin käyttää verkkokaupan taustalla. Suunnittele tietokanta niin, että siihen voidaan tallentaa tietosisältö seuraavia toimintoja varten:
+1. Verkkokaupassa on tuotteita, joilla on nimi, kuvaus ja hinta.
+2. Käyttäjä pystyy etsimään tuotteita ja hänellä on ostoskori, johon voi lisätä ja poistaa tuotteita.
+3. Tuotteita voidaan luokitella tuoteryhmiin. Sama tuote voi kuulua useaan tuoteryhmään.
+4. Kun tilaus on valmis, käyttäjä pystyy antamaan yhteystietonsa ja pankkikorttinsa tiedot, minkä jälkeen tilaus siirtyy käsittelyyn.
+5. Käyttäjä pystyy arvostelemaan tuotteita ja lukemaan muiden käyttäjien antamia arvosteluja.
+6. Tuotteista voidaan muodostaa tarjouspaketteja, joissa tietyt tuotteet saa tiettyyn hintaan pakettina.
+7. Käyttäjä näkee tuotteen kuvauksen yhteydessä, paljonko tuotetta on jäljellä missäkin verkkokaupan varastossa.
+8. Käyttäjä voi saada alennuskoodin, jonka voi syöttää tilauksen yhteydessä. Alennuskoodin voi käyttää vain kerran.
+9. Käyttäjä näkee tuotteen yhteydessä esimerkkejä, mitä tuotteita muut tämän tuotteen ostaneen asiakkaat ovat ostaneet.
+Tehtäväsi on suunnitella, mitä tauluja tietokannassa on, mitä sarakkeita kussakin taulussa on ja miten taulut viittaavat toisiinsa. Jos yllä oleva kuvaus ei kerro jotain yksityiskohtaa, tee jokin järkevä päätös tämän asian suhteen.
+Suunnittele tietokanta luvun 6 periaatteiden mukaisesti ja esitä tietokannan rakenne SQL-skeemana ja tietokantakaaviona. Selosta lisäksi jokaisesta yllä olevasta vaatimuksesta (1–9), mitä tietoa tietokantaan tallennetaan, jotta kyseinen vaatimus saadaan toteutettua.

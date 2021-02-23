@@ -1,0 +1,84 @@
+Table Products {
+  id int [pk]
+  name string
+  description text
+  price double
+}
+
+Table Users {
+  id int [pk]
+  phonenumber string
+  shippingaddress string
+  postcode string
+  city string
+  state string
+}
+
+Table ProductsInShoppingCart {
+  id int [pk]
+  finished bool
+  user_id int [ref: > Users.id]
+  product_id int [ref: > Products.id]
+}
+
+Table Orders {
+  id int [pk]
+  status string
+  shoppingcart_id int [ref: - ProductsInShoppingCart.id]
+  creditcard_id int [ref: - CreditCards.id]
+  discountcode string
+}
+
+Table ProductCategories {
+  id int [pk]
+  category_name string
+}
+
+Table ProductsInCategory {
+  category_id int [ref: > ProductCategories.id]
+  product_id int [ref: > Products.id]
+}
+
+Table Reviews {
+  id int [pk]
+  user_id int [ref: > Users.id]
+  product_id int [ref: > Products.id]
+  ratingStars int
+  ratingText text
+}
+
+Table Packages {
+  id int [pk]
+  price double
+}
+
+Table PackageProducts {
+  package_id int [ref: > Packages.id]
+  product_id int [ref: > Products.id]
+}
+
+Table CreditCards {
+  id int [pk]
+  user_id int [ref: > Users.id]
+  number string
+  billingaddress string
+  securitynum string
+  expirydate date
+}
+
+Table Warehouses {
+  id int [pk]
+  address string
+  city string
+  phonenumber string
+}
+
+Table ProductsInWarehouses {
+  warehouse_id int [ref: > Warehouses.id]
+  product_id int [ref: > Products.id]
+}
+
+Table AlsoBought {
+  product_a_id int [ref: > Products.id]
+  product_b_id int [ref: > Products.id]
+}
